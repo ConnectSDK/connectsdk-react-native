@@ -208,7 +208,7 @@ RCT_EXPORT_BLOCKING_SYNCHRONOUS_METHOD(getName)
     [self setupDiscovery:config];
 }
 
-- (void) pickDevice:(NSDictionary*)command
+- (void) pickDevice:(NSArray*)command
            successCallback:(RCTResponseSenderBlock)successCallback
            errorCallback:(RCTResponseSenderBlock)errorCallback
 {
@@ -218,9 +218,9 @@ RCT_EXPORT_BLOCKING_SYNCHRONOUS_METHOD(getName)
     _showPickerErrorCallback = errorCallback;
     
     BOOL popup = NO;
-    NSDictionary* options = command;
+    NSDictionary* options = [command objectAtIndex:0];
     
-    if (options.count > 1) {
+    if (options.count > 0) {
         NSString* format = options[@"format"];
         
         if (format && [format isEqualToString:@"full"]) {
