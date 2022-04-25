@@ -1,6 +1,6 @@
 {
   "name": "connectsdk-react-native",
-  "version": "1.0.32",
+  "version": "1.0.33",
   "description": "React Native ConnectSDK Component",
   "main": "lib/commonjs/index",
   "module": "lib/module/index",
