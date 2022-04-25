@@ -31,11 +31,6 @@ iOS:
 
     npx pod-install
 
-Android:
-
-    cd android
-    git clone https://github.com/ConnectSDK/Connect-SDK-Android-Core
-
 Thats it! Dependencies will be downloaded and set up automatically.
 
 **Dependencies will not be downloaded automatically for versions older than 1.6.0. You'll need to check the README from that branch and follow any manual set up steps.**

@@ -7,7 +7,7 @@ buildscript {
         }
 
         dependencies {
-            classpath 'com.android.tools.build:gradle:3.5.3'
+            classpath 'com.android.tools.build:gradle:7.0.2'
         }
     }
 }
@@ -19,9 +19,9 @@ def safeExtGet(prop, fallback) {
 }
 
 android {
-    compileSdkVersion safeExtGet('ConnectsdkReactNative_compileSdkVersion', 29)
+    compileSdkVersion safeExtGet('ConnectsdkReactNative_compileSdkVersion', 31)
     defaultConfig {
-        minSdkVersion safeExtGet('ConnectsdkReactNative_minSdkVersion', 16)
+        minSdkVersion safeExtGet('ConnectsdkReactNative_minSdkVersion', 24)
         targetSdkVersion safeExtGet('ConnectsdkReactNative_targetSdkVersion', 29)
         versionCode 1
         versionName "1.0"
@@ -51,11 +51,12 @@ repositories {
     google()
     mavenCentral()
     jcenter()
+    maven { url "https://jitpack.io" }
 }
 
 dependencies {
     //noinspection GradleDynamicVersion
     implementation "com.facebook.react:react-native:+"  // From node_modules
-    implementation project(':Connect-SDK-Android-Core')
+    implementation 'com.github.ConnectSDK:Connect-SDK-Android-Lite:-SNAPSHOT'
     implementation 'com.google.code.gson:gson:2.8.6'
 }
