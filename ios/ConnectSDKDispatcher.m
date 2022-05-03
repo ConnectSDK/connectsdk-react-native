@@ -200,7 +200,7 @@ static id orNull (id obj)
         NSMutableArray* results = [NSMutableArray array];
         
         for(AppInfo* info in appList) {
-            NSDictionary* appInfoObj = @{@"id": info.id, @"name": info.name};
+            NSDictionary* appInfoObj = @{@"id": info.id, @"name": info.name, @"rawData": info.rawData};
             
             [results addObject:appInfoObj];
         }
