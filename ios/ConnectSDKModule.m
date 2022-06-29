@@ -372,7 +372,9 @@ RCT_EXPORT_BLOCKING_SYNCHRONOUS_METHOD(getName)
         
         ConnectableDevice* device = [deviceState device];
         device.delegate = self;
-        [device connect];
+        dispatch_async(dispatch_get_main_queue(), ^{
+            [device connect];
+        });
     }
 }
 
