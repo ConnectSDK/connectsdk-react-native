@@ -57,6 +57,6 @@ repositories {
 dependencies {
     //noinspection GradleDynamicVersion
     implementation "com.facebook.react:react-native:+"  // From node_modules
-    implementation 'com.github.ConnectSDK:Connect-SDK-Android-Lite:-SNAPSHOT'
+    implementation 'com.github.ConnectSDK:Connect-SDK-Android-Lite:b25566a3c1'
     implementation 'com.google.code.gson:gson:2.8.6'
 }
